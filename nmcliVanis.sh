@@ -50,7 +50,7 @@ function startConnection(){
 
 if [ "$(id -u)" == "0" ]; then
 	declare -i paramether_counter=0; declare -i comparator=3
-	while getopts ":n:c:h:" arg; do
+	while getopts ":n:h:" arg; do
 		case $arg in
 			n) network_card=$OPTARG; let paramether_counter+=1 ;;
 			h) helpPanel ;;
